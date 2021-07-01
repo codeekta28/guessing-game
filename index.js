@@ -5,6 +5,7 @@ let UIData = {
 const UI = UIData.UI;
 let previousGuessValueArray = [];
 let randomValue = Math.floor((Math.random() * 100) + 1);
+console.log("randomValue",randomValue);
 if (UI.isSubmitGuess) {
     document.querySelector(UI.form).addEventListener("submit", generateUserValue);
 }
@@ -98,6 +99,7 @@ function calculateAndShowHintMsg(userValue) {
     }
     else {
         document.querySelector(UI.hintUser).innerHTML = "congrats you guess it correctly";
+        endGame();
     }
 
 }

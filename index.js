@@ -4,7 +4,7 @@ let UIData = {
 }
 const UI = UIData.UI;
 let previousGuessValueArray = [];
-let randomValue = Math.floor((Math.random() * 100) + 1);
+let randomValue = Math.floor((Math.random() * 100) + 1);   
 console.log("randomValue",randomValue);
 if (UI.isSubmitGuess) {
     document.querySelector(UI.form).addEventListener("submit", generateUserValue);
@@ -67,7 +67,7 @@ function newGame(userInput) {
     document.querySelector(".newGame").addEventListener("click", () => {
         randomValue = Math.floor((Math.random() * 100) + 1);
         previousGuessValueArray = [];
-        document.querySelector(UI.remainingGuessesSpan).innerHTML = 2;
+        document.querySelector(UI.remainingGuessesSpan).innerHTML = 10;
         UI.guessRemaining = 10;
         document.querySelector(UI.previousGuess).innerHTML = "";
         document.querySelector(UI.hintUser).innerHTML = '';
